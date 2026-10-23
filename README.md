@@ -2,6 +2,22 @@
 
 ManualMind answers troubleshooting questions from fictional industrial manuals. An operator asks about a machine. A LangGraph supervisor chooses manual retrieval, a read-only manufacturer tool, both, a clarifying question, or a refusal. Answers cite stored document ids, pages, sections, and revisions. Rainer and Acme Industrial are demo manufacturers. Their tool payloads are mock fixtures, not live telemetry.
 
+## Test in the cloud
+
+The published demo is on Vercel. The same five areas are available there. Manuals and manufacturer tools are labeled DEMO.
+
+| Area | URL |
+| --- | --- |
+| Chat | https://op-guide-lw4a.vercel.app/chat |
+| Knowledge base | https://op-guide-lw4a.vercel.app/documents |
+| MCP integrations | https://op-guide-lw4a.vercel.app/integrations |
+| Evaluations | https://op-guide-lw4a.vercel.app/evaluations |
+| Architecture | https://op-guide-lw4a.vercel.app/traces |
+
+Start at [Chat](https://op-guide-lw4a.vercel.app/chat). The example prompts ask about Rainer R200 E104, coolant checks, live status versus the manual, revision conflicts, and a question with no supporting document. Knowledge base lists the seeded manuals and their index status. MCP integrations shows the Rainer and Acme adapters and the read-only tools. Evaluations shows scorecards after a run. Architecture shows the agent trace for a chat turn, including retrieval, MCP, evidence ranking, and guardrails.
+
+Local `make dev` serves the same paths on [http://127.0.0.1:4178](http://127.0.0.1:4178).
+
 ## Layout
 
 - `frontend/` React chat, knowledge base, MCP status, evaluations, and traces. This is the Vercel project.
@@ -48,7 +64,7 @@ docker compose up --build
 cd frontend && npm run dev
 ```
 
-Open [http://127.0.0.1:4178](http://127.0.0.1:4178).
+Open [http://127.0.0.1:4178/chat](http://127.0.0.1:4178/chat). Knowledge base, MCP integrations, evaluations, and architecture are `/documents`, `/integrations`, `/evaluations`, and `/traces` on that same host. The cloud copies of those pages are listed under [Test in the cloud](#test-in-the-cloud).
 
 `OPENAI_API_KEY` is optional. With it empty, embeddings are local hashed n-grams labeled `local-hashed-ngram` and answers use a template synthesizer. Those vectors are not OpenAI semantic embeddings and are not probabilities. Set the key to use `text-embedding-3-small` and `gpt-4o-mini`.
 
