@@ -18,6 +18,21 @@ Start at [Chat](https://op-guide-lw4a.vercel.app/chat). The example prompts ask 
 
 Local `make dev` serves the same paths on [http://127.0.0.1:4178](http://127.0.0.1:4178).
 
+Chat
+<img width="1718" height="891" alt="chat_window" src="https://github.com/user-attachments/assets/2789d0df-f5b7-424e-bafc-9000f934e750" />
+
+Knowledge base
+<img width="1692" height="1004" alt="Knowledge_base" src="https://github.com/user-attachments/assets/b69a03b7-5e7d-4c9d-83e1-35b50f0054b5" />
+
+MCP integrations
+<img width="1713" height="882" alt="MCP-integration" src="https://github.com/user-attachments/assets/e7fd3022-5da7-45b5-965c-efc7e1b97a72" />
+
+Evaluations
+<img width="1699" height="1018" alt="Evaluation" src="https://github.com/user-attachments/assets/237e985b-6885-4089-b0df-db37d73db39a" />
+
+Architecture
+<img width="1704" height="1014" alt="Architecture" src="https://github.com/user-attachments/assets/022b6d5e-48f2-45c4-b288-c9ebdd2849bf" />
+
 ## Layout
 
 - `frontend/` React chat, knowledge base, MCP status, evaluations, and traces. This is the Vercel project.
